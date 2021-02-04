@@ -16,20 +16,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 @CrossOrigin
 public class HomeController {
 
-    @GetMapping(value="/prueba", produces=MediaType.APPLICATION_XML_VALUE) //text/xml
-    public String getMethodName() {
-        String a = "<breakfast_menu>"+
-                        "<food>"+
-                            "<name>Belgian Waffles</name>"+
-                            "<price>$5.95</price>"+
-                            "<description>Two of our famous Belgian Waffles with plenty of real maple syrup</description>"+
-                            "<calories>650</calories> </food>"+
-                            "</breakfast_menu>";
-
-        return a;
-    }
-
-
     @GetMapping(value="/persona", produces=MediaType.APPLICATION_JSON_VALUE) //text/xml
     public Persona getPersona() {
         Persona p  = new Persona();
@@ -41,7 +27,7 @@ public class HomeController {
         return p;
     }
     
-    @PostMapping(value="/postTest", consumes = MediaType.APPLICATION_XML_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(value="/postTest", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public String postPruebaTest(@RequestBody Persona persona){
 
 

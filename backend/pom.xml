@@ -54,12 +54,12 @@
 			<version>2.9.2</version>
 		</dependency>
 
-		<!--Consumes xml-->
+		<!--Consumes xml
 		<dependency>
 			<groupId>com.fasterxml.jackson.dataformat</groupId>
 			<artifactId>jackson-dataformat-xml</artifactId>
 		</dependency>
-
+		-->
 		<!-- STOP - ADDED-->
 
 	</dependencies>
