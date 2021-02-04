@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 
 @RestController
@@ -39,5 +41,11 @@ public class HomeController {
         return p;
     }
     
+    @PostMapping(value="/postTest", consumes = MediaType.APPLICATION_XML_VALUE, produces =MediaType.APPLICATION_JSON_VALUE)
+    public String postPruebaTest(@RequestBody Persona persona){
+
+
+        return persona.getNombre() + "|" + persona.getEdad() + "|" + persona.getAltura();
+    }
     
 }
