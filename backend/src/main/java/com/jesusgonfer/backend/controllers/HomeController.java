@@ -21,7 +21,7 @@ public class HomeController {
         Persona p  = new Persona();
 
         p.setAltura(1.5);
-        p.setEdad(40);
+        p.setEdad((int) Math.floor(Math.random()*30 + 1));
         p.setNombre("RAfael");
 
         return p;
